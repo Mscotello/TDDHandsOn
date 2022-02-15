@@ -1,5 +1,5 @@
 import unittest
-import check_pwd
+from check_pwd import check_pwd
 
 
 class Tests(unittest.TestCase):
@@ -7,3 +7,6 @@ class Tests(unittest.TestCase):
         test_string = "abcde"
         self.assertFalse(check_pwd(test_string))
 
+
+if __name__ == '__main__':
+    unittest.main()
