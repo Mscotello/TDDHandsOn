@@ -4,6 +4,7 @@ def check_pwd(pwd):
 
     symbols = "~`!@#$%^&*()_+-="
     symbolFlag = 0
+    disallowedSymbolFlag = 0
     lowerCaseFlag = 0
     upperCaseFlag = 0
     numberFlag = 0
@@ -16,7 +17,9 @@ def check_pwd(pwd):
             numberFlag = 1
         if char in symbols:
             symbolFlag = 1
-    if lowerCaseFlag == 0 or upperCaseFlag == 0 or numberFlag == 0 or symbolFlag == 0:
+        if not str.isalnum(char) and char not in symbols:
+            disallowedSymbolFlag = 1
+    if lowerCaseFlag == 0 or upperCaseFlag == 0 or numberFlag == 0 or symbolFlag == 0 or disallowedSymbolFlag == 1:
         return False
 
     return True
