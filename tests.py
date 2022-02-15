@@ -27,6 +27,10 @@ class Tests(unittest.TestCase):
         test_string = "abCdefhijkbac4"
         self.assertFalse(check_pwd(test_string))
 
+    def test_if_string_contains_unallowed_symbols_then_false(self):
+        test_string = "a(bCdjkbac4[]"
+        self.assertFalse(check_pwd(test_string))
+
 
 if __name__ == '__main__':
     unittest.main()
