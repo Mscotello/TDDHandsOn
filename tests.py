@@ -19,6 +19,10 @@ class Tests(unittest.TestCase):
         test_string = "abcdefhijk"
         self.assertFalse(check_pwd(test_string))
 
+    def test_if_string_contains_no_numbers_then_false(self):
+        test_string = "abCdefhijkbac"
+        self.assertFalse(check_pwd(test_string))
+
 
 if __name__ == '__main__':
     unittest.main()
