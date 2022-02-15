@@ -3,9 +3,13 @@ def check_pwd(pwd):
         return False
 
     lowerCaseFlag = 0
+    upperCaseFlag = 0
     for char in pwd:
         if str.islower(pwd):
             lowerCaseFlag = 1
-    if lowerCaseFlag == 0:
+        if str.isupper(pwd):
+            upperCaseFlag = 1
+    if lowerCaseFlag == 0 or upperCaseFlag == 0:
         return False
+
     return True
