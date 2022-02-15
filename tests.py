@@ -11,5 +11,6 @@ class Tests(unittest.TestCase):
         test_string = "abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde"
         self.assertFalse(check_pwd(test_string))
 
+
 if __name__ == '__main__':
     unittest.main()
