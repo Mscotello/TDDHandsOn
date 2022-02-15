@@ -12,5 +12,10 @@ class Tests(unittest.TestCase):
         self.assertFalse(check_pwd(test_string))
 
 
+    def test_if_string_contains_no_lower_case_character_then_false(self):
+        test_string = "ABCDEFGHIJK"
+        self.assertFalse(check_pwd(test_string))
+
+
 if __name__ == '__main__':
     unittest.main()
